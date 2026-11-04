@@ -504,6 +504,7 @@ class Component extends DCLogic {
       kalnciems: ['Kalnciema laat', 56.9518, 24.0760, 'shop', 'Kalnciema kvartāls Riga'],
       galcentrs: ['Galerija Centrs · kaubanduskeskus', 56.9478, 24.1128, 'shop', 'Galerija Centrs Audēju iela 16 Riga'],
       stockmann: ['Stockmann · kaubamaja', 56.9465, 24.1185, 'shop', 'Stockmann 13. janvāra iela 8 Riga'],
+      nikasan: ['Nikasan · helmed', 56.9557, 24.1300, 'shop', 'Nikasan Ģertrūdes iela 46 Riga'],
       origo: ['Origo · kaubanduskeskus', 56.9468, 24.1207, 'shop', 'Origo Stacijas laukums 2 Riga'],
       galleria: ['Galleria Riga · kaubanduskeskus', 56.9564, 24.1233, 'shop', 'Galleria Riga Dzirnavu iela 67'],
       bazars: ['Berga Bazārs · poed ja kohvikud', 56.9523, 24.1210, 'shop', 'Berga Bazārs Riga'],
@@ -554,10 +555,10 @@ class Component extends DCLogic {
     function pts(a) { return a.map(function (q) { var p = P(q[0], q[1]); return p[0].toFixed(1) + ',' + p[1].toFixed(1); }).join(' '); }
     function pct(lon, lat) { var p = P(lon, lat); return { left: (p[0] / 8).toFixed(2) + '%', top: (p[1] / 5).toFixed(2) + '%' }; }
     function gm(q) { return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q); }
-    var KEEP = ['angars', 'snatch', 'yolk', 'galcentrs', 'stockmann', 'galleria', 'riija', 'miera', 'ngrip', 'humT', 'humG', 'humA', 'otraelpa', 'smor', 'shoyu', 'pnv', 'skand', 'tavi'];
+    var KEEP = ['angars', 'snatch', 'yolk', 'galcentrs', 'stockmann', 'galleria', 'riija', 'miera', 'ngrip', 'humT', 'humG', 'humA', 'otraelpa', 'smor', 'shoyu', 'pnv', 'skand', 'tavi', 'nikasan'];
     var order = [];
     var CATS = [['music', 'Kontsert'], ['food', 'Söök'], ['thrift', 'Vintage ja second hand'], ['furniture', 'Kasutatud mööbel'], ['shop', 'Disain ja kaubanduskeskused']];
-    var CORDER = { music: ['angars'], food: ['yolk', 'shoyu', 'snatch', 'smor'], thrift: ['ngrip', 'humT', 'humG', 'humA', 'otraelpa', 'tavi'], shop: ['riija', 'miera', 'galleria', 'galcentrs', 'stockmann'] };
+    var CORDER = { music: ['angars'], food: ['yolk', 'shoyu', 'snatch', 'smor'], thrift: ['ngrip', 'humT', 'humG', 'humA', 'otraelpa', 'tavi'], shop: ['riija', 'miera', 'galleria', 'galcentrs', 'stockmann', 'nikasan'] };
     CATS.forEach(function (c) {
       (CORDER[c[0]] || []).forEach(function (k) { if (KEEP.indexOf(k) >= 0 && PL[k] && order.indexOf(k) < 0) order.push(k); });
       KEEP.forEach(function (k) { if (PL[k] && PL[k][3] === c[0] && order.indexOf(k) < 0) order.push(k); });
@@ -597,6 +598,7 @@ class Component extends DCLogic {
       galleria: ['Kaubanduskeskus', 'Dzirnavu iela 67', '', 'pood'],
       galcentrs: ['Kaubanduskeskus vanalinnas', 'Audēju iela 16', '', 'pood'],
       stockmann: ['Kaubamaja', '13. janvāra iela 8', 'E–R 9–22 · L–P 10–22', 'kaubamaja'],
+      nikasan: ['Helmed ja ehtetarvikud', 'Ģertrūdes iela 46 (sissepääs A. Čaka 41 poolt)', 'Kellaajad netis puuduvad · tel 22720850', 'helmed'],
       origo: ['Kaubanduskeskus raudteejaama juures', 'Stacijas laukums', '', 'pood'],
       barona: ['Kaubanduskeskus', 'Krišjāņa Barona iela', '', 'pood'],
       miera: ['Tänav disaini- ja vintagepoodidega (M50, Ze Store)', 'Miera iela', '', 'tänav'],
