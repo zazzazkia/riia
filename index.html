@@ -489,6 +489,7 @@ class Component extends DCLogic {
     var PL = {
       shoyu: ['Shōyu · raamen', 56.9603, 24.1128, 'food', 'Shoyu ramen Ausekļa iela 20 Riga'],
       tavi: ['Tavi Draugi · heategevuspood', 56.9552, 24.1290, 'thrift', 'Tavi Draugi charity shop Ģertrūdes iela 32 Riga'],
+      tuvu: ['TUVU · heategevuspood', 56.9588, 24.1395, 'thrift', 'TUVU labdarības veikals Aleksandra Čaka iela 71 Riga'],
       skand: ['Skandināvs · kasutatud mööbel', 56.9442, 24.0832, 'furniture', 'Skandinavs Nometņu iela 64 Riga'],
       pnv: ['Preces no Vācijas · kasutatud mööbel', 56.9575, 24.1365, 'furniture', 'Preces no Vācijas Matīsa iela 23 Riga'],
       smor: ['SMØR · bistroo', 56.9585, 24.1170, 'food', 'SMOR bistro Krišjāņa Valdemāra iela 27 Riga'],
@@ -556,10 +557,10 @@ class Component extends DCLogic {
     function pts(a) { return a.map(function (q) { var p = P(q[0], q[1]); return p[0].toFixed(1) + ',' + p[1].toFixed(1); }).join(' '); }
     function pct(lon, lat) { var p = P(lon, lat); return { left: (p[0] / 8).toFixed(2) + '%', top: (p[1] / 5).toFixed(2) + '%' }; }
     function gm(q) { return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q); }
-    var KEEP = ['angars', 'snatch', 'yolk', 'galcentrs', 'stockmann', 'galleria', 'riija', 'miera', 'ngrip', 'humT', 'humG', 'humA', 'otraelpa', 'smor', 'shoyu', 'pnv', 'skand', 'tavi', 'nikasan', 'hob'];
+    var KEEP = ['angars', 'snatch', 'yolk', 'galcentrs', 'stockmann', 'galleria', 'riija', 'miera', 'ngrip', 'humT', 'humG', 'humA', 'otraelpa', 'smor', 'shoyu', 'pnv', 'skand', 'tavi', 'nikasan', 'hob', 'tuvu'];
     var order = [];
     var CATS = [['music', 'Kontsert'], ['food', 'Söök'], ['thrift', 'Vintage ja second hand'], ['furniture', 'Kasutatud mööbel'], ['shop', 'Disain ja kaubanduskeskused']];
-    var CORDER = { music: ['angars'], food: ['yolk', 'shoyu', 'snatch', 'smor'], thrift: ['ngrip', 'humT', 'humG', 'humA', 'otraelpa', 'tavi'], shop: ['riija', 'miera', 'galleria', 'galcentrs', 'stockmann', 'nikasan', 'hob'] };
+    var CORDER = { music: ['angars'], food: ['yolk', 'shoyu', 'snatch', 'smor'], thrift: ['ngrip', 'humT', 'humG', 'humA', 'otraelpa', 'tavi', 'tuvu'], shop: ['riija', 'miera', 'galleria', 'galcentrs', 'stockmann', 'nikasan', 'hob'] };
     CATS.forEach(function (c) {
       (CORDER[c[0]] || []).forEach(function (k) { if (KEEP.indexOf(k) >= 0 && PL[k] && order.indexOf(k) < 0) order.push(k); });
       KEEP.forEach(function (k) { if (PL[k] && PL[k][3] === c[0] && order.indexOf(k) < 0) order.push(k); });
@@ -584,6 +585,7 @@ class Component extends DCLogic {
     };
     var IMGS = { nikasan: 'img/nikasan.jpg', yolk: 'img/yolk.jpg', shoyu: 'img/shoyu.jpg', smor: 'img/smor.jpg', angars: 'img/rmw.jpg', snatch: 'img/snatch.jpg', ngrip: 'img/ngrip.jpg', riija: 'img/riija.jpg', galleria: 'img/galleria.jpg', galcentrs: 'img/galcentrs.jpg', stockmann: 'img/stockmann.jpg', miera: 'img/miera.jpg', humT: 'img/humT.jpg', humG: 'img/humG.jpg', otraelpa: 'img/otraelpa.jpg', humA: 'img/humA.jpg' };
     var FOOD = {
+      tuvu: ['Heategevuspood · riided', 'Aleksandra Čaka iela 71', '', 'vintage'],
       tavi: ['Heategevuspood: nõud, raamatud, riided, vintage · tulu läheb Ukraina ja Läti abiprojektidele', 'Ģertrūdes iela 32', 'E–R 10–19 · L 11–17 · P suletud', 'vintage'],
       skand: ['Skandinaavia mööbel, sisustus, vintage-riided ja kangad', 'Nometņu iela 64 · Āgenskalna turg', 'E 9–17 · T–L 9–19 · P 9–17', 'mööbel'],
       pnv: ['Mööbel, nõud, plaadimängijad ja vinüülid Saksamaalt', 'Matīsa iela 23 (uus asukoht oktoobrist)', 'E–R 11–19 · L 11–17', 'mööbel'],
