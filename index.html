@@ -82,7 +82,7 @@ button{font:inherit}
 <button type="button" onClick="{{showAll}}" style="background: none; border: 0; padding: 0; cursor: pointer; color: #2F5D8A; font-weight: 600; font-size: calc(14px * {{ts}})">Näita kõiki päevi</button>
 </sc-if>
 </div>
-<div style="display: flex; justify-content: space-between; gap: {{cardGap}}; flex-wrap: wrap; font-size: calc(13px * {{ts}}); color: {{cMuted}}"><span>Ilm Riias</span><span>Prognoos seisuga 4.11 · <a href="https://www.yr.no/en/forecast/daily-table/2-456172/Latvia/R%C4%ABga/R%C4%ABga/Riga" style="color: rgb(47, 93, 138)">värske yr.no-s</a></span></div>
+<div style="display: flex; justify-content: space-between; gap: {{cardGap}}; flex-wrap: wrap; font-size: calc(13px * {{ts}}); color: {{cMuted}}"><span>Ilm Riias</span><span>Prognoos seisuga 6.11 · <a href="https://www.yr.no/en/forecast/daily-table/2-456172/Latvia/R%C4%ABga/R%C4%ABga/Riga" style="color: rgb(47, 93, 138)">värske yr.no-s</a></span></div>
 <div style="display: flex; flex-wrap: wrap; gap: {{cardGap}}; align-items: stretch">
 <div style="flex: 1 1 280px; min-width: 0; background: {{cCard}}; border: 2px solid {{bD1}}; border-radius: {{radius}}; padding: {{cardPadY}} {{cardPad}}; display: flex; flex-direction: column; gap: 10px">
 <button type="button" onClick="{{pickD1}}" style="background: none; border: 0; padding: 0; cursor: pointer; text-align: left; color: {{cText}}; display: flex; justify-content: space-between; align-items: flex-start; gap: {{cardGap}}">
@@ -91,14 +91,14 @@ button{font:inherit}
 <div style="font-size: calc(14px * {{ts}}); color: {{cMuted}}">Kontserdipäev</div>
 </div>
 <div style="display: flex; align-items: center; gap: 6px; flex: none">
-<svg width="36" height="36" viewBox="0 0 52 52" aria-hidden="true"><path d="M15 34a9 9 0 0 1 1-18 12 12 0 0 1 22 4 7 7 0 0 1-1 14z" fill="#FFFFFF" stroke="#5D6573" stroke-width="2.5" stroke-linejoin="round"></path></svg>
+<svg width="36" height="36" viewBox="0 0 52 52" aria-hidden="true"><circle cx="20" cy="18" r="8" fill="#C98A12"></circle><path d="M17 40a8 8 0 0 1 1-16 11 11 0 0 1 20 4 6 6 0 0 1-1 12z" fill="#FFFFFF" stroke="#5D6573" stroke-width="2.5" stroke-linejoin="round"></path></svg>
 <div>
-<div style="font-family: {{fHead}}; font-weight: 800; font-size: calc(20px * {{hs}}); line-height: 1">10°</div>
+<div style="font-family: {{fHead}}; font-weight: 800; font-size: calc(20px * {{hs}}); line-height: 1">11°</div>
 <div style="font-size: calc(12px * {{ts}}); color: {{cMuted}}">öösel 8°</div>
 </div>
 </div>
 </button>
-<div style="font-size: calc(13px * {{ts}}); color: {{cMuted}}; border-bottom: 1px dashed {{cLine}}; padding-bottom: 8px">Pilves terve päev · 0 mm · tuul 7 m/s</div>
+<div style="font-size: calc(13px * {{ts}}); color: {{cMuted}}; border-bottom: 1px dashed {{cLine}}; padding-bottom: 8px">Pilves, vahel päike · õhtul 9°, võimalik hoovihm · tuul 7 m/s</div>
 <div style="display: flex; flex-direction: column; gap: 10px">
 <div style="display: grid; grid-template-columns: 50px minmax(0, 1fr); gap: 8px; font-size: calc(14px * {{ts}})">
 <span style="color: {{cMuted}}">12:00</span>
@@ -170,14 +170,14 @@ button{font:inherit}
 <div style="font-size: calc(14px * {{ts}}); color: {{cMuted}}">Linn ja shopping</div>
 </div>
 <div style="display: flex; align-items: center; gap: 6px; flex: none">
-<svg width="36" height="36" viewBox="0 0 52 52" aria-hidden="true"><circle cx="20" cy="18" r="8" fill="#C98A12"></circle><path d="M17 40a8 8 0 0 1 1-16 11 11 0 0 1 20 4 6 6 0 0 1-1 12z" fill="#FFFFFF" stroke="#5D6573" stroke-width="2.5" stroke-linejoin="round"></path></svg>
+<svg width="36" height="36" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="10" fill="#C98A12"></circle><path d="M26 6v6M26 40v6M6 26h6M40 26h6M12 12l4 4M36 36l4 4M12 40l4-4M36 16l4-4" stroke="#C98A12" stroke-width="2.5" stroke-linecap="round"></path></svg>
 <div>
 <div style="font-family: {{fHead}}; font-weight: 800; font-size: calc(20px * {{hs}}); line-height: 1">8°</div>
-<div style="font-size: calc(12px * {{ts}}); color: {{cMuted}}">öösel 4°</div>
+<div style="font-size: calc(12px * {{ts}}); color: {{cMuted}}">öösel 3°</div>
 </div>
 </div>
 </button>
-<div style="font-size: calc(13px * {{ts}}); color: {{cMuted}}; border-bottom: 1px dashed {{cLine}}; padding-bottom: 8px">Vahelduv pilvisus terve päev · 0 mm · tuul 7 m/s</div>
+<div style="font-size: calc(13px * {{ts}}); color: {{cMuted}}; border-bottom: 1px dashed {{cLine}}; padding-bottom: 8px">Valdavalt päikeseline, kuiv · tuul 6 m/s · öösel külm</div>
 
 <div style="display: grid; grid-template-columns: 50px minmax(0, 1fr); gap: 8px; font-size: calc(14px * {{ts}})">
 <span style="color: {{cMuted}}">12:00</span>
@@ -222,14 +222,14 @@ button{font:inherit}
 <div style="font-size: calc(14px * {{ts}}); color: {{cMuted}}">Laat ja koju</div>
 </div>
 <div style="display: flex; align-items: center; gap: 6px; flex: none">
-<svg width="36" height="36" viewBox="0 0 52 52" aria-hidden="true"><path d="M15 34a9 9 0 0 1 1-18 12 12 0 0 1 22 4 7 7 0 0 1-1 14z" fill="#FFFFFF" stroke="#5D6573" stroke-width="2.5" stroke-linejoin="round"></path></svg>
+<svg width="36" height="36" viewBox="0 0 52 52" aria-hidden="true"><path d="M15 30a9 9 0 0 1 1-18 12 12 0 0 1 22 4 7 7 0 0 1-1 14z" fill="#E1EAF3" stroke="#2F5D8A" stroke-width="2.5" stroke-linejoin="round"></path><path d="M18 36l-3 6M27 36l-3 6M36 36l-3 6" stroke="#2F5D8A" stroke-width="2.5" stroke-linecap="round" fill="none"></path></svg>
 <div>
 <div style="font-family: {{fHead}}; font-weight: 800; font-size: calc(20px * {{hs}}); line-height: 1">8°</div>
-<div style="font-size: calc(12px * {{ts}}); color: {{cMuted}}">öösel 4°</div>
+<div style="font-size: calc(12px * {{ts}}); color: {{cMuted}}">öösel 5°</div>
 </div>
 </div>
 </button>
-<div style="font-size: calc(13px * {{ts}}); color: {{cMuted}}; border-bottom: 1px dashed {{cLine}}; padding-bottom: 8px">Pilves terve päev · 0 mm · tuul 4 m/s</div>
+<div style="font-size: calc(13px * {{ts}}); color: {{cMuted}}; border-bottom: 1px dashed {{cLine}}; padding-bottom: 8px">Pilves · pärastlõunal ja õhtul hoovihmad, alla 1 mm</div>
 <div style="display: flex; flex-direction: column; gap: 10px">
 
 <div style="display: grid; grid-template-columns: 50px minmax(0, 1fr); gap: 8px; font-size: calc(14px * {{ts}})">
@@ -521,7 +521,7 @@ class Component extends DCLogic {
       otraelpa: ['Otrā Elpa · heategevuspood', 56.9600, 24.1305, 'thrift', 'Otrā Elpa Stabu iela 35 Riga']
     };
     var DAYS = [
-      { id: 'd1', date: 'N 5.11', theme: 'Kontserdipäev', hl: 'SADU kell 18:00', icon: 'cloud', hi: 10, lo: 8, wx: 'Pilves terve päev · 0 mm · tuul 7 m/s', ev: [
+      { id: 'd1', date: 'N 5.11', theme: 'Kontserdipäev', hl: 'SADU kell 18:00', icon: 'partly', hi: 11, lo: 8, wx: 'Pilves, vahel päike · õhtul 9°, võimalik hoovihm · tuul 7 m/s', ev: [
         ['~09:30', 'travel', null, 'Põlvast välja', 'Sõit umbes 3,5–4 h koos peatusega. Täpne aeg veel lahtine.'],
         ['13:30', 'food', null, 'Lõuna: Shōyu', 'Ramen, Michelini Bib Gourmand. Ausekļa 20, avatud alates 12:00.'],
         ['15:00', 'stay', null, 'Check-in', 'Vanalinna korter. Auto tasuta maa-alusesse parklasse.'],
@@ -530,7 +530,7 @@ class Component extends DCLogic {
         ['18:00', 'music', 'angars', 'SADU', '18:00–18:40, Angārs NA Events lava.', true],
         ['19:15', 'food', 'snatch', 'Õhtusöök: Snatch', 'Moodne Itaalia köök, Elizabetes 39. Broneeri ette! Pärast võib Angārsisse tagasi minna: ELPO 20:40, JKLN 22:00.']
       ] },
-      { id: 'd2', date: 'R 6.11', theme: 'Linn ja shopping', hl: 'Vanalinn + 3 Pavāri õhtul', icon: 'partly', hi: 8, lo: 4, wx: 'Vahelduv pilvisus terve päev · 0 mm · tuul 7 m/s', ev: [
+      { id: 'd2', date: 'R 6.11', theme: 'Linn ja shopping', hl: 'Vanalinn + 3 Pavāri õhtul', icon: 'sun', hi: 8, lo: 3, wx: 'Valdavalt päikeseline, kuiv · tuul 6 m/s · öösel külm', ev: [
         ['09:30', 'food', 'rocket', 'Hommik: Rocket Bean', 'Väga hea kohv ja munaroad. Kui toas on hommikusöök, jäta vahele.'],
         ['11:00', 'sight', 'freedom', 'Jalutus vanalinna', 'Vabadussammas → Doma laukums → Mustpeade maja.'],
         ['11:45', 'sight', 'peter', 'Peetri kiriku torn', 'Parim vaade linnale. Lift üles.'],
@@ -541,7 +541,7 @@ class Component extends DCLogic {
         ['16:30', 'sight', 'alberta', 'Jugendstiil Alberta ielal', 'Kõige ilusamad fassaadid. Pimeneb vara, mine enne 17.'],
         ['19:00', 'food', 'b7', 'Õhtusöök: B7', 'Moodne bistroo, Ausekļa 7. Avatud T–L 17–23. Broneeri ette!']
       ] },
-      { id: 'd3', date: 'L 7.11', theme: 'Laat ja koju', hl: 'Kalnciema laupäevalaat', icon: 'cloud', hi: 8, lo: 4, wx: 'Pilves terve päev · 0 mm · tuul 4 m/s', ev: [
+      { id: 'd3', date: 'L 7.11', theme: 'Laat ja koju', hl: 'Kalnciema laupäevalaat', icon: 'rain', hi: 8, lo: 5, wx: 'Pilves · pärastlõunal ja õhtul hoovihmad, alla 1 mm', ev: [
         ['09:30', 'food', 'yolk', 'Hommik: Yolkhaus', 'Hommikusöögikoht, Dzirnavu 42. Laupäeval avatud alates 9:00.'],
         ['11:30', 'stay', null, 'Check-out', 'Korterist välja. Auto peale.'],
         ['12:00', 'shop', 'kalnciems', 'Kalnciema kvartāli laat', 'Iga laupäev 10–16. Talunikud, käsitöö, puumajad. Võta sularaha.'],
